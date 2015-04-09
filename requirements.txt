@@ -1,0 +1,27 @@
+# Latest django
+django
+
+# deploy toolkit
+Fabric
+
+# Debug toolbar
+django-debug-toolbar
+
+# @phpdude libs
+django-macros-url
+django-render
+
+# cache
+python-memcached
+django-clear-cache
+
+# assets management tool
+django-compressor
+
+# better console python
+bpython
+
+# Database drivers. Uncomment anyone is used.
+#MySQL-python
+#mysqlclient
+#psycopg2
