@@ -9,6 +9,10 @@ env.roledefs['production'] = ['django@production.server.ip:port']
 
 def production_env():
     """Production environment"""
+
+    # Speedup connection setup to server.
+    env.disable_known_hosts = True
+
     env.key_filename = [os.path.join(os.environ['HOME'], '.ssh', 'id_rsa')]
     env.user = 'django'
     env.project_root = 'path to project base dir'
