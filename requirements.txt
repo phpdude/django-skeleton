@@ -1,5 +1,6 @@
 # Latest django
 django
+django_extensions
 
 # deploy toolkit
 Fabric
@@ -18,10 +19,9 @@ django-clear-cache
 # assets management tool
 django-compressor
 
-# better console python
-bpython
-
 # Database drivers. Uncomment anyone is used.
 #MySQL-python
 #mysqlclient
 #psycopg2
+
+# Project custom apps

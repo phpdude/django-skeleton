@@ -7,7 +7,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'compressor',
-    'bpython',
+    'django_extensions',
     'clear_cache',
 
     # your apps goes here
