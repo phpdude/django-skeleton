@@ -10,7 +10,7 @@ django-debug-toolbar
 
 # @phpdude libs
 django-macros-url
-django-render
+django-template-names
 
 # cache
 python-memcached

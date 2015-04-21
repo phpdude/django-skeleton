@@ -17,6 +17,8 @@ fi
 
 source $ENV_DIR/bin/activate
 
+pip install -U pip
+
 pip install -r requirements.txt -U
 
 python manage.py migrate
