@@ -5,7 +5,7 @@ settings = sys.modules['project.settings']
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'LOCATION': 'paygate'
+        'LOCATION': '{{ project_name }}.default'
     }
 }
 

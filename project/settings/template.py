@@ -18,7 +18,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 # Use project/templates/ as templates folder.
-TEMPLATE_DIRS = (os.path.join(settings.BASE_DIR, 'templates'), )
+TEMPLATE_DIRS = (os.path.join(settings.PROJECT_DIR, 'templates'),)
 
 # Cachable template loader. caches processed templates in memory, very fast next use. workflow like jinja2. Important
 # to use in production.
