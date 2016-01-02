@@ -8,9 +8,8 @@ TEMPLATES = [{
     'DIRS': [
         os.path.join(settings.PROJECT_DIR, 'templates'),
     ],
-    'DEBUG': settings.DEBUG,
-    'APP_DIRS': True,
     'OPTIONS': {
+        'debug': settings.DEBUG,
         'context_processors': [
             'django.contrib.auth.context_processors.auth',
             'django.core.context_processors.debug',
