@@ -3,13 +3,12 @@ import sys
 
 settings = sys.modules['project.settings']
 
-TEMPLATE_DEBUG = settings.DEBUG
-
 TEMPLATES = [{
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
     'DIRS': [
         os.path.join(settings.PROJECT_DIR, 'templates'),
     ],
+    'DEBUG': settings.DEBUG,
     'APP_DIRS': True,
     'OPTIONS': {
         'context_processors': [
