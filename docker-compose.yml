@@ -25,7 +25,6 @@ web:
     - db
     - cache
     - assets
-    - assets-fonts
 
 assets-prod:
   extends:
