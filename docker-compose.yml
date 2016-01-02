@@ -20,7 +20,7 @@ web:
   volumes:
     - ./:/code/
   ports:
-    - "8801:8000"
+    - "8000:8000"
   links:
     - db
     - cache
