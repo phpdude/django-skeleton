@@ -3,7 +3,7 @@ Django skeleton project by @dude
 
 You can bootstrap your django project with command
 
-> django-admin.py startproject --template=https://github.com/phpdude/django-skeleton/archive/master.zip yoursite
+> django-admin.py startproject --template=https://github.com/phpdude/django-skeleton/archive/master.zip -e "ini,yml,conf,json" yoursite
 
 After installation you must create virtualenv and install all required packages by default.
 
