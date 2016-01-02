@@ -16,12 +16,9 @@ django-template-names
 python-memcached
 django-clear-cache
 
-# assets management tool
-django-compressor
-
 # Database drivers. Uncomment anyone is used.
 #MySQL-python
 #mysqlclient
-#psycopg2
+psycopg2
 
 # Project custom apps

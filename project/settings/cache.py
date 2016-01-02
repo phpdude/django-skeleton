@@ -4,8 +4,8 @@ settings = sys.modules['project.settings']
 
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'LOCATION': '{{ project_name }}.default'
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': 'cache:11211'
     }
 }
 

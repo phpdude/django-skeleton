@@ -1,0 +1,34 @@
+db:
+  image: postgres
+  environment:
+    - POSTGRES_USER={{ project_name }}
+    - POSTGRES_PASSWORD={{ project_name }}
+
+cache:
+  image: memcached
+
+assets:
+  image: phpdude/node-bower-webpack
+  volumes:
+    - ./project/assets:/data
+  command: /bin/bash -c 'npm i --no-bin-links && webpack --display-modules --profile'
+
+web:
+  build: ./
+  privileged: true
+  command: /bin/bash -c 'python manage.py migrate && python manage.py runserver 0.0.0.0:8000'
+  volumes:
+    - ./:/code/
+  ports:
+    - "8801:8000"
+  links:
+    - db
+    - cache
+    - assets
+    - assets-fonts
+
+assets-prod:
+  extends:
+    service: assets
+
+  command: /bin/bash -c 'npm i --no-bin-links && PRODUCTION=1 webpack --display-modules --profile'

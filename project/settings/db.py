@@ -1,4 +1,3 @@
-import os
 import sys
 
 settings = sys.modules['project.settings']
@@ -8,18 +7,11 @@ settings = sys.modules['project.settings']
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # sqlite3, postgresql_psycopg2, mysql, oracle
-        'NAME': os.path.join(settings.BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': '{{ project_name }}',
+        'USER': '{{ project_name }}',
+        'PASSWORD': '{{ project_name }}',
+        'HOST': 'db',
+        'CONN_MAX_AGE': 900
     }
 }
-
-# DATABASES = {
-# 'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': '{{ project_name }}',
-#         'USER': '{{ project_name }}',
-#         'PASSWORD': 'ENTER PASSWORD HERE',
-#         'HOST': '127.0.0.1',
-#         'CONN_MAX_AGE': 900
-#     }
-# }
