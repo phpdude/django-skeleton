@@ -1,4 +1,4 @@
-# django-skeleton v0.1.1
+# django-skeleton v0.2.0
 Django skeleton project by @dude
 
 You can bootstrap your django project with command
