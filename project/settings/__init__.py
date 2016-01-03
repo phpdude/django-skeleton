@@ -1,8 +1,8 @@
 import inspect
-import pkgutil
 import os
-from pprint import pformat
+import pkgutil
 import sys
+from pprint import pformat
 
 ordering = ('env', 'local_env', 'paths', 'middleware', 'debug_toolbar')
 
@@ -24,10 +24,12 @@ except ImportError:
     pass
 
 settingsraw = []
+REWRITE_DOCKER_BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 for s in locals().copy():
     if s.isupper():
         try:
-            settingsraw.append("%s = %s\n" % (s, pformat(locals()[s], indent=0, width=100000)))
+            value = pformat(locals()[s], indent=0, width=100000).replace(REWRITE_DOCKER_BASE_DIR, '.')
+            settingsraw.append("%s = %s\n" % (s, value))
         except:
             pass
 
