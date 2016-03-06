@@ -1,2 +1,6 @@
 env/
 .idea/
+node_modules
+*.pyc
+npm-debug.log
+tmp/

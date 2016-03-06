@@ -1,8 +1,10 @@
 {
-  "name": "{{ project_name }}",
+  "name": "frontend",
   "version": "1.0.0",
   "description": "Webpack project configuration",
   "main": "webpack.config.js",
+  "license": "UNLICENSED",
+  "private": true,
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
     "babel-core": "6.3.15",
